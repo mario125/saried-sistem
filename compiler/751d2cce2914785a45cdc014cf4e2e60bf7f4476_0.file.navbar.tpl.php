@@ -1,3 +1,29 @@
+<?php /* Smarty version 3.1.27, created on 2017-02-22 09:15:11
+         compiled from "C:\xampp\htdocs\SARI\styles\templates\overall\navbar.tpl" */ ?>
+<?php
+/*%%SmartyHeaderCode:123274146458ad488ff3c6a9_23460550%%*/
+if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '751d2cce2914785a45cdc014cf4e2e60bf7f4476' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\SARI\\styles\\templates\\overall\\navbar.tpl',
+      1 => 1487751122,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '123274146458ad488ff3c6a9_23460550',
+  'has_nocache_code' => false,
+  'version' => '3.1.27',
+  'unifunc' => 'content_58ad488ff3ded9_80696822',
+),false);
+/*/%%SmartyHeaderCode%%*/
+if ($_valid && !is_callable('content_58ad488ff3ded9_80696822')) {
+function content_58ad488ff3ded9_80696822 ($_smarty_tpl) {
+
+$_smarty_tpl->properties['nocache_hash'] = '123274146458ad488ff3c6a9_23460550';
+?>
 <nav class="navbar">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -78,3 +104,6 @@
         </div>
     </div>
 </nav>
+<?php }
+}
+?>

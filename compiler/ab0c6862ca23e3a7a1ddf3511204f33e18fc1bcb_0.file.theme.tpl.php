@@ -1,3 +1,29 @@
+<?php /* Smarty version 3.1.27, created on 2017-02-22 06:45:30
+         compiled from "C:\xampp\htdocs\SARI\styles\templates\overall\theme.tpl" */ ?>
+<?php
+/*%%SmartyHeaderCode:143569110558ad257a26d161_26521484%%*/
+if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'ab0c6862ca23e3a7a1ddf3511204f33e18fc1bcb' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\SARI\\styles\\templates\\overall\\theme.tpl',
+      1 => 1487742186,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '143569110558ad257a26d161_26521484',
+  'has_nocache_code' => false,
+  'version' => '3.1.27',
+  'unifunc' => 'content_58ad257a26e6a9_96691142',
+),false);
+/*/%%SmartyHeaderCode%%*/
+if ($_valid && !is_callable('content_58ad257a26e6a9_96691142')) {
+function content_58ad257a26e6a9_96691142 ($_smarty_tpl) {
+
+$_smarty_tpl->properties['nocache_hash'] = '143569110558ad257a26d161_26521484';
+?>
 <aside id="rightsidebar" class="right-sidebar">
   <div class="menu">
       <ul class="list">
@@ -52,3 +78,6 @@
   </div>
 
 </aside>
+<?php }
+}
+?>

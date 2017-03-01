@@ -1,26 +1,68 @@
-{include 'overall/head.tpl'}
+<?php /* Smarty version 3.1.27, created on 2017-02-20 05:39:57
+         compiled from "C:\xampp\htdocs\SARI\styles\templates\public\verUser.tpl" */ ?>
+<?php
+/*%%SmartyHeaderCode:93517026258aa731d4e3564_79017764%%*/
+if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '6b7b977f73bd3f958cceb9b394ee0caefd03cc16' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\SARI\\styles\\templates\\public\\verUser.tpl',
+      1 => 1487565594,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '93517026258aa731d4e3564_79017764',
+  'variables' => 
+  array (
+    'posts' => 0,
+    'tp' => 0,
+  ),
+  'has_nocache_code' => false,
+  'version' => '3.1.27',
+  'unifunc' => 'content_58aa731d555315_29734611',
+),false);
+/*/%%SmartyHeaderCode%%*/
+if ($_valid && !is_callable('content_58aa731d555315_29734611')) {
+function content_58aa731d555315_29734611 ($_smarty_tpl) {
+
+$_smarty_tpl->properties['nocache_hash'] = '93517026258aa731d4e3564_79017764';
+echo $_smarty_tpl->getSubTemplate ('overall/head.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
   <title>ADMINISTRADORES</title>
 <body class="theme-red">
   <!-- Page Loader -->
-  {include 'overall/load.tpl'}
+  <?php echo $_smarty_tpl->getSubTemplate ('overall/load.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
   <!-- #END# Page Loader -->
   <!-- Overlay For Sidebars -->
   <div class="overlay"></div>
   <!-- #END# Overlay For Sidebars -->
   <!-- Search Bar -->
-  {include 'overall/buscar.tpl'}
+  <?php echo $_smarty_tpl->getSubTemplate ('overall/buscar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
   <!-- #END# Search Bar -->
   <!-- Top Bar -->
-  {include 'overall/navbar.tpl'}
+  <?php echo $_smarty_tpl->getSubTemplate ('overall/navbar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
   <!-- #Top Bar -->
   <section>
       <!-- Left Sidebar -->
       <aside id="leftsidebar" class="sidebar">
           <!-- User Info -->
-          {include 'overall/info_user.tpl'}
+          <?php echo $_smarty_tpl->getSubTemplate ('overall/info_user.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
           <!-- #User Info -->
           <!-- Menu -->
-          {include 'overall/nav_movil.tpl'}
+          <?php echo $_smarty_tpl->getSubTemplate ('overall/nav_movil.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
           <!-- #Menu -->
           <!-- Footer -->
 
@@ -28,7 +70,9 @@
       </aside>
       <!-- #END# Left Sidebar -->
       <!-- Right Sidebar -->
-       {include 'overall/theme.tpl'}
+       <?php echo $_smarty_tpl->getSubTemplate ('overall/theme.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
       <!-- #END# Right Sidebar -->
   </section>
 
@@ -78,24 +122,44 @@
                                 </tfoot>
                                 <tbody>
 
-                                    {foreach from=$posts item=tp}
+                                    <?php
+$_from = $_smarty_tpl->tpl_vars['posts']->value;
+if (!is_array($_from) && !is_object($_from)) {
+settype($_from, 'array');
+}
+$_smarty_tpl->tpl_vars['tp'] = new Smarty_Variable;
+$_smarty_tpl->tpl_vars['tp']->_loop = false;
+foreach ($_from as $_smarty_tpl->tpl_vars['tp']->value) {
+$_smarty_tpl->tpl_vars['tp']->_loop = true;
+$foreach_tp_Sav = $_smarty_tpl->tpl_vars['tp'];
+?>
                                     <tr>
-                                        <td>{$tp.id_user}</td>
-                                        <td>{$tp.dni_user}</td>
-                                        <td>{$tp.nom_user}</td>
-                                        <td>{$tp.ape_user}</td>
-                                        <td>{$tp.con_user}</td>
-                                        <td>{$tp.tel_user}</td>
-                                        <td>{$tp.dir_user}</td>
-                                        {if $tp.est_user=="1"}
+                                        <td><?php echo $_smarty_tpl->tpl_vars['tp']->value['id_user'];?>
+</td>
+                                        <td><?php echo $_smarty_tpl->tpl_vars['tp']->value['dni_user'];?>
+</td>
+                                        <td><?php echo $_smarty_tpl->tpl_vars['tp']->value['nom_user'];?>
+</td>
+                                        <td><?php echo $_smarty_tpl->tpl_vars['tp']->value['ape_user'];?>
+</td>
+                                        <td><?php echo $_smarty_tpl->tpl_vars['tp']->value['con_user'];?>
+</td>
+                                        <td><?php echo $_smarty_tpl->tpl_vars['tp']->value['tel_user'];?>
+</td>
+                                        <td><?php echo $_smarty_tpl->tpl_vars['tp']->value['dir_user'];?>
+</td>
+                                        <?php if ($_smarty_tpl->tpl_vars['tp']->value['est_user'] == "1") {?>
                                         <td>ACTIVO</td>
-                                        {else}
+                                        <?php } else { ?>
                                         <td>INACTIVO</td>
-                                        {/if}
+                                        <?php }?>
                                         <td><button type="button" class=" boton btn btn-primary waves-effect">PERFIL</button></td>
                                         <td><button type="button" class=" boton2 btn btn-primary waves-effect">EDITAR</button></td>
                                     </tr>
-                                      {/foreach}
+                                      <?php
+$_smarty_tpl->tpl_vars['tp'] = $foreach_tp_Sav;
+}
+?>
                                     <!--  <tr>
                                         <td>total</td>
                                         <td></td>
@@ -125,7 +189,8 @@
         </div>
     </section>
 
-    <script>
+    <?php echo '<script'; ?>
+>
 $(document).ready(function(){
     $(".boton").click(function(){
 
@@ -168,9 +233,15 @@ $(document).ready(function(){
 
     });
 });
-</script>
+<?php echo '</script'; ?>
+>
 
-{include 'overall/js_footer.tpl'}
+<?php echo $_smarty_tpl->getSubTemplate ('overall/js_footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
 </body>
 
 </html>
+<?php }
+}
+?>

@@ -1,4 +1,31 @@
-{include 'overall/head.tpl'}
+<?php /* Smarty version 3.1.27, created on 2017-02-20 03:52:54
+         compiled from "C:\xampp\htdocs\SARI\styles\templates\public\registrarUser.tpl" */ ?>
+<?php
+/*%%SmartyHeaderCode:5190578158aa5a06d8f3a6_87122408%%*/
+if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'b77bf13f74babe255c9d728a96a3b9cea1adf0e6' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\SARI\\styles\\templates\\public\\registrarUser.tpl',
+      1 => 1487559157,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '5190578158aa5a06d8f3a6_87122408',
+  'has_nocache_code' => false,
+  'version' => '3.1.27',
+  'unifunc' => 'content_58aa5a06dd4121_70996422',
+),false);
+/*/%%SmartyHeaderCode%%*/
+if ($_valid && !is_callable('content_58aa5a06dd4121_70996422')) {
+function content_58aa5a06dd4121_70996422 ($_smarty_tpl) {
+
+$_smarty_tpl->properties['nocache_hash'] = '5190578158aa5a06d8f3a6_87122408';
+echo $_smarty_tpl->getSubTemplate ('overall/head.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
 
 
 <body class="signup-pagee">
@@ -161,8 +188,11 @@
 
 		<!-- Bootstrap Core Js -->
 
-    <script type="text/javascript" src="styles/js/regis.js"> </script>
-    <script type="text/javascript">
+    <?php echo '<script'; ?>
+ type="text/javascript" src="styles/js/regis.js"> <?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ type="text/javascript">
 				$(document).ready(function()
 				{
 									var name ="anom.png";
@@ -290,36 +320,60 @@
 									}
 
 				});
-				</script>
+				<?php echo '</script'; ?>
+>
 
 
-		<script src="styles/plugins/bootstrap/js/bootstrap.js"></script>
+		<?php echo '<script'; ?>
+ src="styles/plugins/bootstrap/js/bootstrap.js"><?php echo '</script'; ?>
+>
 
 		<!-- Select Plugin Js -->
-		<script src="styles/plugins/bootstrap-select/js/bootstrap-select.js"></script>
+		<?php echo '<script'; ?>
+ src="styles/plugins/bootstrap-select/js/bootstrap-select.js"><?php echo '</script'; ?>
+>
 
 		<!-- Slimscroll Plugin Js -->
-		<script src="styles/plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+		<?php echo '<script'; ?>
+ src="styles/plugins/jquery-slimscroll/jquery.slimscroll.js"><?php echo '</script'; ?>
+>
 
 		<!-- Waves Effect Plugin Js -->
-		<script src="styles/plugins/node-waves/waves.js"></script>
+		<?php echo '<script'; ?>
+ src="styles/plugins/node-waves/waves.js"><?php echo '</script'; ?>
+>
 
 		<!-- Autosize Plugin Js -->
-		<script src="styles/plugins/autosize/autosize.js"></script>
+		<?php echo '<script'; ?>
+ src="styles/plugins/autosize/autosize.js"><?php echo '</script'; ?>
+>
 
 		<!-- Moment Plugin Js -->
-		<script src="styles/plugins/momentjs/moment.js"></script>
+		<?php echo '<script'; ?>
+ src="styles/plugins/momentjs/moment.js"><?php echo '</script'; ?>
+>
 
 		<!-- Bootstrap Material Datetime Picker Plugin Js -->
-		<script src="styles/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+		<?php echo '<script'; ?>
+ src="styles/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"><?php echo '</script'; ?>
+>
 
 		<!-- Custom Js -->
-		<script src="styles/js/admin.js"></script>
-		<script src="styles/js/pages/forms/basic-form-elements.js"></script>
+		<?php echo '<script'; ?>
+ src="styles/js/admin.js"><?php echo '</script'; ?>
+>
+		<?php echo '<script'; ?>
+ src="styles/js/pages/forms/basic-form-elements.js"><?php echo '</script'; ?>
+>
 
 		<!-- Demo Js -->
-		<script src="styles/js/demo.js"></script>
+		<?php echo '<script'; ?>
+ src="styles/js/demo.js"><?php echo '</script'; ?>
+>
 
 </body>
 
 </html>
+<?php }
+}
+?>

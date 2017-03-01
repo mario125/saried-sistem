@@ -47,10 +47,7 @@ class Acceso{
 
         }
     }
-    public function Recuperar()
-    {
 
-    }
 
 
     public function U_juego()
@@ -130,11 +127,11 @@ class Acceso{
 
               }else{
                   $datos = $db->rrecorrer($sql);
-                  if (strtolower($this->dni) == strtolower($datos['dni_user']) && strtolower($this->apellidos) == strtolower($datos['ape_user'])) {
+                  if (strtolower($this->dni) == strtolower($datos['dni_user']) || strtolower($this->apellidos) == strtolower($datos['ape_user'])) {
                         echo  2;
                   }
-                  if (strtolower($this->nick) == strtolower($datos['nick'])) {
-                      echo 3;
+                  if (strtolower($this->nick) == strtolower($datos['nic_user'])) {
+                        echo 3;
                   }
 
               }
@@ -154,6 +151,161 @@ class Acceso{
 
     }
 
+    public function Edid_user()
+    {
+
+      try{
+          //require('core/models/class.Conexion.php');
+
+          if(!empty($_POST['id']) and
+             !empty($_POST['dni']) and
+             !empty($_POST['nombres']) and
+             !empty($_POST['apellidos'])and
+             !empty($_POST['telefono'])and
+             !empty($_POST['direccion'])and
+             !empty($_POST['condicion'])and
+             !empty($_POST['estado'])and
+             !empty($_POST['nick'])and
+             !empty($_POST['pass'])
+
+
+
+             )
+          {
+              $db = new Conexion();
+            //   $fecha_actual = date('Y-m-d');
+               $this->id =$db->real_escape_string($_POST['id']);
+               $this->dni =$db->real_escape_string($_POST['dni']);
+               $this->nombres =$db->real_escape_string($_POST['nombres']);
+               $this->apellidos =$db->real_escape_string($_POST['apellidos']);
+               $this->telefono =$db->real_escape_string($_POST['telefono']);
+               $this->direccion =$db->real_escape_string($_POST['direccion']);
+               $this->nick =$db->real_escape_string($_POST['nick']);
+               $this->pass =$db->real_escape_string($_POST['pass']);
+               $this->condicion =$db->real_escape_string($_POST['condicion']);
+               $this->estado =$db->real_escape_string($_POST['estado']);
+
+
+
+            $sql  = $db->query("UPDATE `usuario` SET
+`dni_user`='$this->dni',
+`nom_user`='$this->nombres',
+`ape_user`='$this->apellidos',
+`tel_user`='$this->telefono',
+`dir_user`='$this->direccion',
+`nic_user`='$this->nick',
+`pas_user`='$this->pass',
+`con_user`='$this->condicion',
+`est_user`='$this->estado'
+   WHERE id_user=$this->id");
+
+
+            if ($sql==1) {
+              # code...
+              echo 1;
+            }else {
+              # code...
+              echo 2;
+            }
+
+
+              $db->liberar($sql);
+              $db->close();
+          }else{
+              throw new Exception('Error: Datos vacios..');
+
+          }
+
+      }catch(Exceptionm $login){
+          echo $login->getMessage();
+
+      }
+
+    }
+
+
+    public function RegisBien()
+    {
+
+      try{
+          //require('core/models/class.Conexion.php');
+
+          if(!empty($_POST['codigo']) and
+             !empty($_POST['tipo']) and
+             !empty($_POST['detalle'])and
+             !empty($_POST['fecha'])and
+             !empty($_POST['cantidad'])and
+             !empty($_POST['valor'])and
+             !empty($_POST['estado'])and
+             !empty($_POST['foto'])
+
+             )
+          {
+              $db = new Conexion();
+            //   $fecha_actual = date('Y-m-d');
+               $this->codigo =$db->real_escape_string($_POST['codigo']);
+               $this->tipo =$db->real_escape_string($_POST['tipo']);
+               $this->detalle =$db->real_escape_string($_POST['detalle']);
+               $this->fecha =$db->real_escape_string($_POST['fecha']);
+               $this->cantidad =$db->real_escape_string($_POST['cantidad']);
+               $this->valor =$db->real_escape_string($_POST['valor']);
+               $this->estado =$db->real_escape_string($_POST['estado']);
+               $this->foto =$db->real_escape_string($_POST['foto']);
+               $this->admin =$db->real_escape_string($_SESSION['id_user']);
+
+
+
+            $sql  = $db->query("SELECT * FROM `bien` WHERE cod_bien='$this->codigo'");
+
+              if($db-> rows($sql)==0){
+
+
+
+              $sql2 = $db->query("INSERT INTO `bien`(
+                `cod_bien`,
+                 `tip_bien`,
+                 `det_bien`,
+                 `fec_bien`,
+                 `can_bien`,
+                 `val_bien`,
+                 `fot_bien`,
+                 `reg_bien`,
+                 `est_bien`) VALUES (
+                   '$this->codigo',
+                   '$this->tipo',
+                   '$this->detalle',
+                   '$this->fecha',
+                    $this->cantidad,
+                    $this->valor,
+                   'bien/$this->foto',
+                    $this->admin,
+                   '$this->estado')");
+
+
+
+
+              echo 1;
+
+
+              }else{
+                echo 2;
+
+              }
+
+
+              $db->liberar($sql,$sql2);
+              $db->close();
+          }else{
+              throw new Exception('Error: Datos vacios..');
+
+          }
+
+      }catch(Exceptionm $login){
+          echo $login->getMessage();
+
+      }
+
+    }
 
 }
 ?>

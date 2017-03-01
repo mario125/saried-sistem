@@ -7,6 +7,10 @@
 
    if ($_POST) {
      # code...
+     require('core/models/class.Acceso.php');
+     $acceso = new Acceso();
+     $acceso->Edid_user();
+     exit;
    }
    else {
      # code...

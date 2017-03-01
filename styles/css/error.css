@@ -1,0 +1,25 @@
+
+.error{
+    background-color: rgba(213,18,53,1);
+    border-radius: 4px 4px 4px 4px;
+    color: white;
+
+    margin-left: -40px;
+    margin-top: -6px;
+    padding: 6px 12px;
+    position: absolute;
+    z-index: 20;
+}
+.error:before{
+    border-color: transparent #BC1010 transparent transparent;
+    border-style: solid;
+    border-width: 6px 8px;
+    content: "";
+    display: block;
+    height: 0;
+    left: -16px;
+    position: absolute;
+    top: 8px;
+    width: 0;
+    z-index:100;
+}
