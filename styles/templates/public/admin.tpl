@@ -27,17 +27,23 @@
         </aside>
         <!-- #END# Left Sidebar -->
         <!-- Right Sidebar -->
-         {include 'overall/theme.tpl'}
+
         <!-- #END# Right Sidebar -->
     </section>
-
     <section class="content">
         <div class="container-fluid">
             <div class="block-header">
-                <h2>BLANK PAGE</h2>
+              <div class="row align-items: center;">
+
+                 <img src="fotos/unamba.png" alt="" style=" width:100%; height: 50%;">
+              </div>
+
+
+
             </div>
         </div>
     </section>
+
 
     {include 'overall/js_footer.tpl'}
 </body>

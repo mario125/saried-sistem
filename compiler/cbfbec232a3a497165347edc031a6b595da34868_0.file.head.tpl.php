@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-02-22 08:35:27
+<?php /* Smarty version 3.1.27, created on 2017-03-13 02:53:32
          compiled from "C:\xampp\htdocs\SARI\styles\templates\overall\head.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:189129936758ad3f3fa61005_10387317%%*/
+/*%%SmartyHeaderCode:144602419558c5fb9c5b4297_96331516%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'cbfbec232a3a497165347edc031a6b595da34868' => 
     array (
       0 => 'C:\\xampp\\htdocs\\SARI\\styles\\templates\\overall\\head.tpl',
-      1 => 1487748886,
+      1 => 1489370009,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '189129936758ad3f3fa61005_10387317',
+  'nocache_hash' => '144602419558c5fb9c5b4297_96331516',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_58ad3f3fa976a7_88847160',
+  'unifunc' => 'content_58c5fb9c5ebff0_75029651',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_58ad3f3fa976a7_88847160')) {
-function content_58ad3f3fa976a7_88847160 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_58c5fb9c5ebff0_75029651')) {
+function content_58c5fb9c5ebff0_75029651 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '189129936758ad3f3fa61005_10387317';
+$_smarty_tpl->properties['nocache_hash'] = '144602419558c5fb9c5b4297_96331516';
 ?>
 <!DOCTYPE html>
 
@@ -40,8 +40,12 @@ $_smarty_tpl->properties['nocache_hash'] = '189129936758ad3f3fa61005_10387317';
     <link rel="stylesheet" href="styles/css/error.css">
     <link rel="stylesheet" type="text/css" href="styles/bower_components/dropzone/downloads/css/dropzone.css">
     <?php echo '<script'; ?>
+ type="text/javascript" src="styles/js/jquery-latest.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
  src="styles/plugins/jquery/jquery.min.js"><?php echo '</script'; ?>
 >
+
 
     <?php echo '<script'; ?>
  type="text/javascript" src="styles/bower_components/dropzone/downloads/dropzone.min.js"><?php echo '</script'; ?>
@@ -85,6 +89,24 @@ $_smarty_tpl->properties['nocache_hash'] = '189129936758ad3f3fa61005_10387317';
 
 
     <link href="styles/plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css" rel="stylesheet">
+
+
+      <link rel="stylesheet" href="styles/css/font-awesome.min.css">
+
+     <link rel="stylesheet" href="styles/css/auto-complete.css">
+
+
+
+     
+     <link rel="stylesheet" href="styles/css/estilos.css">
+     <!-- Buttons DataTables -->
+     <link rel="stylesheet" href="styles/css/buttons.bootstrap.min.css">
+     <link rel="stylesheet" href="styles/css/font-awesome.min.css">
+
+
+
+
+
 
 
 

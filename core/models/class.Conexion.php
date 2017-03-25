@@ -22,7 +22,7 @@ class Conexion extends mysqli{
 
 
     }
-  
+
 
 }
 ?>

@@ -14,7 +14,7 @@
            </div>
        </div>
    {else}
-   <body class="signup-page ls-closed gb-colo">
+   <body class="signup-page ls-closed bg-indigo">
      {include 'overall/login.tpl'}
    {/if}
 
@@ -34,11 +34,12 @@ window.onload=function(){
       if (user!=''&&pass!='') {
         connect.onreadystatechange =function(){
           if (connect.readyState==4&&connect.status==200) {
-            alert(connect.responseText);
+          //  alert(connect.responseText);
             if (parseInt(connect.responseText) ==1) {
                     result='<div class="alert alert-warning alert-dismissible" role="alert">  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>CONECTADO..</div>';
-                    location.href= '?view=admin';
+
                     document.getElementById('_AJAX_').innerHTML=result;
+                    location.href= '?view=admin';
 
 
             } else if(parseInt(connect.responseText)==0){

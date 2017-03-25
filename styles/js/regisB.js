@@ -119,14 +119,14 @@
 						if (true) {
 							connect.onreadystatechange =function(){
  							 if (connect.readyState==4&&connect.status==200) {
- 								  //alert(connect.responseText);
+ 								 // alert(connect.responseText);
  								 if (parseInt(connect.responseText) ==1) {
 
  												 result='<div class="alert alert-warning alert-dismissible" role="alert">  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>CONECTADO..</div>';
 
-												 setTimeout(envio(),500);												 
+												 setTimeout(envio(),500);
  												 document.getElementById('_AJAX_').innerHTML=result;
-												 location.href= '?view=admin';
+												 location.href= '?view=listaB';
 
 
  								 } else if(parseInt(connect.responseText)==2){

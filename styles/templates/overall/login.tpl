@@ -1,4 +1,4 @@
-<div class="signup-box">
+<div class="signup-box " >
     <div class="logo">
         <a href="javascript:void(0);">Admin<b>INVENTARIO</b></a>
         <small>UNAMBA-Abancay</small>

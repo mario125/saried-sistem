@@ -28,7 +28,7 @@
     </aside>
     <!-- #END# Left Sidebar -->
     <!-- Right Sidebar -->
-     {include 'overall/theme.tpl'}
+
     <!-- #END# Right Sidebar -->
 </section>
 
@@ -39,7 +39,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header">
-                            <h2>TO REGISTER BIEN</h2>
+                            <h2>REGISTRAR BIEN</h2>
 
                         </div>
                         <div class="body">
@@ -164,9 +164,9 @@
                                                         </span>
                                                         <select id="estado"class=" estado form-control show-tick" required>
                                                                           <option value="0">ESTADO</option>
-                                                                          <option value="1">OPERATIVO</option>
-                                                                          <option value="2">INOPERATIVO</option>
-                                                                          <option value="3">OBSOLETO</option>
+                                                                          <option value='OPERATIVO'>OPERATIVO</option>
+                                                                          <option value='INOPERATIVO'>INOPERATIVO</option>
+                                                                          <option value='OBSOLETO'>OBSOLETO</option>
 
                                                           </select>
                                                     </div>

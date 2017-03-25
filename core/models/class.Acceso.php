@@ -13,7 +13,7 @@ class Acceso{
                 $this->user =$db->real_escape_string($_POST['user']);
                 $this->pass =$db->real_escape_string($_POST['pass']);
 
-                $sql = $db->query("SELECT * FROM `usuario` WHERE nic_user='$this->user' and pas_user='$this->pass' ");
+                $sql = $db->query("SELECT * FROM `usuario` WHERE nic_user='$this->user' and pas_user='$this->pass'and est_user='ACTIVO' ");
                 if($db-> rows($sql)>0){
 
                     $datos = $db->rrecorrer($sql);
@@ -29,7 +29,7 @@ class Acceso{
                     $_SESSION['nic_user'] = $datos['nic_user'];
                     $_SESSION['pas_user'] = $datos['pas_user'];
                     $_SESSION['est_user'] = $datos['est_user'];
-                    echo $_SESSION['est_user'];
+                    echo 1;
                 }else{
                     echo 4;
                      }
@@ -75,7 +75,12 @@ class Acceso{
 
     }
 
+    function encriptar($cadena){
+        $key='';  // Una clave de codificacion, debe usarse la misma para encriptar y desencriptar
+        $encrypted = base64_encode(mcrypt_encrypt(MCRYPT_RIJNDAEL_256, md5($key), $cadena, MCRYPT_MODE_CBC, md5(md5($key))));
+        return $encrypted; //Devuelve el string encriptado
 
+    }
     public function RegisUser()
     {
 
@@ -110,9 +115,11 @@ class Acceso{
                $this->foto =$db->real_escape_string($_POST['foto']);
 
 
-            $sql  = $db->query("SELECT id_user, dni_user, nom_user, ape_user FROM usuario WHERE dni_user='$this->dni' OR nic_user='$this->nick' ");
 
-              if($db-> rows($sql)==0){
+
+            $sql  = $db->query("SELECT id_user, dni_user, nom_user, ape_user ,nic_user FROM usuario WHERE dni_user='$this->dni' OR nic_user='$this->nick' ");
+
+              if($db->affected_rows==0){
 
 
 
@@ -123,6 +130,7 @@ class Acceso{
 
 
               echo 1;
+              $db->liberar($sql2);
 
 
               }else{
@@ -137,7 +145,7 @@ class Acceso{
               }
 
 
-              $db->liberar($sql,$sql2);
+              $db->liberar($sql);
               $db->close();
           }else{
               throw new Exception('Error: Datos vacios..');
@@ -255,34 +263,29 @@ class Acceso{
 
 
 
-            $sql  = $db->query("SELECT * FROM `bien` WHERE cod_bien='$this->codigo'");
+          //  $sql  = $db->query("SELECT * FROM `bien` WHERE cod_bien='$this->codigo' AND est_cargo='ENTREGADO' ");
 
-              if($db-> rows($sql)==0){
+                        $sql = $db->query("INSERT INTO `bien`(
+                          `cod_bien`,
+                           `tip_bien`,
+                           `det_bien`,
+                           `fec_bien`,
+                           `can_bien`,
+                           `val_bien`,
+                           `fot_bien`,
+                           `reg_bien`,
+                           `est_bien`) VALUES (
+                             '$this->codigo',
+                             '$this->tipo',
+                             '$this->detalle',
+                             '$this->fecha',
+                              $this->cantidad,
+                              $this->valor,
+                             'bien/$this->foto',
+                              $this->admin,
+                             '$this->estado')");
 
-
-
-              $sql2 = $db->query("INSERT INTO `bien`(
-                `cod_bien`,
-                 `tip_bien`,
-                 `det_bien`,
-                 `fec_bien`,
-                 `can_bien`,
-                 `val_bien`,
-                 `fot_bien`,
-                 `reg_bien`,
-                 `est_bien`) VALUES (
-                   '$this->codigo',
-                   '$this->tipo',
-                   '$this->detalle',
-                   '$this->fecha',
-                    $this->cantidad,
-                    $this->valor,
-                   'bien/$this->foto',
-                    $this->admin,
-                   '$this->estado')");
-
-
-
+              if($sql==1){
 
               echo 1;
 
@@ -293,7 +296,7 @@ class Acceso{
               }
 
 
-              $db->liberar($sql,$sql2);
+              $db->liberar($sql);
               $db->close();
           }else{
               throw new Exception('Error: Datos vacios..');
@@ -306,6 +309,192 @@ class Acceso{
       }
 
     }
+    public function EdidBien()
+    {
+      try {
+        if(!empty($_POST['id']) and
+           !empty($_POST['codigo']) and
+           !empty($_POST['tipo']) and
+           !empty($_POST['detalle'])and
+           !empty($_POST['fecha'])and
+           !empty($_POST['cantidad'])and
+           !empty($_POST['valor'])and
+           !empty($_POST['estado'])and
+           !empty($_POST['registrador'])
+
+         ){
+           $db = new Conexion();
+         //   $fecha_actual = date('Y-m-d');
+            $this->id =$db->real_escape_string($_POST['id']);
+            $this->codigo =$db->real_escape_string($_POST['codigo']);
+            $this->tipo =$db->real_escape_string($_POST['tipo']);
+            $this->detalle =$db->real_escape_string($_POST['detalle']);
+            $this->fecha =$db->real_escape_string($_POST['fecha']);
+            $this->cantidad =$db->real_escape_string($_POST['cantidad']);
+            $this->valor =$db->real_escape_string($_POST['valor']);
+            $this->estado =$db->real_escape_string($_POST['estado']);
+            $this->registrador =$db->real_escape_string($_POST['registrador']);
+
+
+
+                        $sql  = $db->query("UPDATE bien SET
+                          tip_bien='$this->tipo',
+                          det_bien='$this->detalle',
+                          val_bien=$this->valor,
+                          est_bien='$this->estado'
+                          WHERE id_bien=$this->id");
+
+
+                                      if ($sql==1) {
+                                        # code...
+                                        echo 1;
+                                      }else {
+                                        # code...
+                                        echo 2;
+                                      }
+
+
+
+
+         }else {
+           throw new Exception('Error: Datos vacios..');
+         }
+
+      } catch (Exception $e) {
+        echo $e->getMessage();
+
+      }
+
+
+    }
+
+    public function prestarB()
+    {
+      try {
+        if (!empty($_POST['oficina']) and
+           !empty($_POST['entrego']) and
+           !empty($_POST['cargo']) and
+           !empty($_POST['fecha']) and
+           !empty($_POST['id']) and
+           !empty($_POST['codigo']) and
+           !empty($_POST['estado'])
+           ) {
+             $db = new Conexion();
+           //   $fecha_actual = date('Y-m-d');
+              $this->oficina =$db->real_escape_string($_POST['oficina']);
+              $this->entrego =$db->real_escape_string($_POST['entrego']);
+              $this->cargo =$db->real_escape_string($_POST['cargo']);
+              $this->fecha =$db->real_escape_string($_POST['fecha']);
+              $this->id =$db->real_escape_string($_POST['id']);
+              $this->codigo =$db->real_escape_string($_POST['codigo']);
+              $this->estado =$db->real_escape_string($_POST['estado']);
+              $this->prestador =$db->real_escape_string($_SESSION['id_user']);
+              $sql  = $db->query("SELECT * FROM cargo WHERE cod_bien='$this->codigo'and est_cargo='ENTREGADO'");
+              if ($db-> rows($sql)==0) {
+                  $sql2 = $db->query("INSERT INTO `cargo`( `pre_cargo`, `ofi_cargo`,
+                                                           `pre_cargo_a`, `fun_p_cargo`,
+                                                           `fec_p_cargo`, `resepciona_cargo`,
+                                                           `dev_cargo`, `fun_d_cargo`,
+                                                           `fec_d_cargo`, `id_bien`,
+                                                            `cod_bien`, `est_cargo`) VALUES (
+                                                            '$this->prestador','$this->oficina',
+                                                            '$this->entrego','$this->cargo',
+                                                            '$this->fecha','no devuelto',
+                                                            'no devuelto','no devuelto',
+                                                            'no devuelto','$this->id','$this->codigo','$this->estado')");
+                # code...
+                $db->liberar($sql,$sql2);
+                $db->close();
+                echo 1;
+
+              } else {
+                # code...
+                $db->liberar($sql);
+                $db->close();
+                echo 2;
+              }
+
+
+
+
+          # code...
+        } else {
+          # code...
+          echo 104;
+        }
+
+
+      } catch (Exception $e) {
+          echo $e->getMessage();
+      }
+
+    }
+
+    public function devolBien()
+    {
+      try {
+        if(!empty($_POST['id']) and
+           !empty($_POST['codigo']) and
+           !empty($_POST['estado']) and
+           !empty($_POST['resepciona'])and
+           !empty($_POST['entregadopor'])and
+           !empty($_POST['cargo'])and
+           !empty($_POST['fecha'])
+
+         ){
+           $db = new Conexion();
+         //   $fecha_actual = date('Y-m-d');
+            $this->id =$db->real_escape_string($_POST['id']);
+            $this->codigo =$db->real_escape_string($_POST['codigo']);
+            $this->estado =$db->real_escape_string($_POST['estado']);
+            $this->resepciona =$db->real_escape_string($_SESSION['id_user']);
+            $this->entregadopor =$db->real_escape_string($_POST['entregadopor']);
+            $this->cargo =$db->real_escape_string($_POST['cargo']);
+            $this->fecha =$db->real_escape_string($_POST['fecha']);
+
+
+
+            $sql2  = $db->query("UPDATE bien SET
+              est_bien='$this->estado'
+              WHERE cod_bien='$this->codigo'");
+
+                        $sql  = $db->query("UPDATE cargo SET
+                          resepciona_cargo='$this->resepciona',
+                          dev_cargo='$this->entregadopor',
+                          fun_d_cargo='$this->cargo',
+                          fec_d_cargo='$this->fecha',
+                          est_cargo='DEVUELTO'
+                          WHERE est_cargo='ENTREGADO' and id_cargo=$this->id AND cod_bien='$this->codigo' ");
+
+
+
+
+                         if ($db->affected_rows==1) {
+                           # code...
+                           echo 1;
+                         }
+                         else if ($db->affected_rows==0) {
+                           # code...
+                           echo 2;
+                         }
+
+
+
+
+
+         }else {
+           throw new Exception('Error: Datos vacios..');
+         }
+
+      } catch (Exception $e) {
+        echo $e->getMessage();
+
+      }
+
+
+    }
+
+
 
 }
 ?>

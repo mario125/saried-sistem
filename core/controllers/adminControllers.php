@@ -1,7 +1,7 @@
 <?php
 
 
-if($_SESSION['est_user']=='1'){
+if($_SESSION['est_user']=="ACTIVO"){
 
 
 	$template = new Smarty();

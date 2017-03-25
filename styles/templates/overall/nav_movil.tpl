@@ -16,14 +16,15 @@
               <li>
                   <a href="?view=listaB">LISTAR BIENES</a>
               </li>
+              <li>
+                  <a href="?view=listaBP">LISTAR BIENES PRESTADOS</a>
+              </li>
                 <li>
                     <a href="?view=regisB">REGISTRAR BIEN</a>
                 </li>
+              
                 <li>
-                    <a href="?view=prestarB">PRESTAR BIEN</a>
-                </li>
-                <li>
-                    <a href="?view=devolverB">DEVOLUCIÓN DE UN BIEN</a>
+                    <a href="?view=devolBien">DEVOLUCIÓN DE UN BIEN</a>
                 </li>
             </ul>
         </li>
@@ -39,12 +40,7 @@
                 <span>VER ADMINISTRADORES</span>
             </a>
         </li>
-        <li>
-            <a href="?view=detalles">
-                <i class="material-icons">layers</i>
-                <span>DETALLES</span>
-            </a>
-        </li>
+
 
 
     </ul>

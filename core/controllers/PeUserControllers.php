@@ -3,7 +3,7 @@
  <?php
 
  $template = new smarty();
- if($_SESSION['est_user']=='1'){
+ if($_SESSION['est_user']=="ACTIVO"){
    $db = new Conexion();
     $type = isset($_GET['type'])? $_GET['type'] :null;
 

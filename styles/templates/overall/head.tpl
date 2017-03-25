@@ -13,7 +13,9 @@
     <!-- file grup-->
     <link rel="stylesheet" href="styles/css/error.css">
     <link rel="stylesheet" type="text/css" href="styles/bower_components/dropzone/downloads/css/dropzone.css">
+    <script type="text/javascript" src="styles/js/jquery-latest.js"></script>
     <script src="styles/plugins/jquery/jquery.min.js"></script>
+
 
     <script type="text/javascript" src="styles/bower_components/dropzone/downloads/dropzone.min.js"></script>
     <!-- Google Fonts -->
@@ -51,6 +53,24 @@
 
 
     <link href="styles/plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css" rel="stylesheet">
+
+
+      <link rel="stylesheet" href="styles/css/font-awesome.min.css">
+
+     <link rel="stylesheet" href="styles/css/auto-complete.css">
+
+
+
+     
+     <link rel="stylesheet" href="styles/css/estilos.css">
+     <!-- Buttons DataTables -->
+     <link rel="stylesheet" href="styles/css/buttons.bootstrap.min.css">
+     <link rel="stylesheet" href="styles/css/font-awesome.min.css">
+
+
+
+
+
 
 
 
