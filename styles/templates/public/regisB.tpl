@@ -28,7 +28,7 @@
     </aside>
     <!-- #END# Left Sidebar -->
     <!-- Right Sidebar -->
-     {include 'overall/theme.tpl'}
+
     <!-- #END# Right Sidebar -->
 </section>
 
@@ -39,7 +39,9 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header">
-                            <h2>TO REGISTER BIEN</h2>
+                        <center>
+                            <h3>REGISTRAR BIEN</h3>
+                          </center>
 
                         </div>
                         <div class="body">
@@ -67,6 +69,43 @@
 
 
                                                   </div>
+                                                  <div class="col-md-6">
+
+                                                        <div class="input-group">
+
+                                                            <span class="input-group-addon">
+                                                                <i class="material-icons">picture_in_picture</i>
+                                                            </span>
+                                                            <div class="form-line">
+
+
+                                                                <input id="codigoP"class="codigoP form-control" value="" placeholder="CODIGO PATRIMONIAL" type="text">
+
+                                                            </div>
+                                                        </div>
+
+
+
+                                                  </div>
+                                                  <div class="col-md-6">
+
+                                                        <div class="input-group">
+
+                                                            <span class="input-group-addon">
+                                                                <i class="material-icons">picture_in_picture</i>
+                                                            </span>
+                                                            <div class="form-line">
+
+
+                                                                <input id="codigoI"class="codigoI form-control" value="" placeholder="CODIGO INTERNO"  type="text">
+
+                                                            </div>
+                                                        </div>
+
+
+
+                                                  </div>
+
                                                   <div class="col-md-6">
                                                     <div class="input-group">
                                                         <span class="input-group-addon">
@@ -164,9 +203,9 @@
                                                         </span>
                                                         <select id="estado"class=" estado form-control show-tick" required>
                                                                           <option value="0">ESTADO</option>
-                                                                          <option value="1">OPERATIVO</option>
-                                                                          <option value="2">INOPERATIVO</option>
-                                                                          <option value="3">OBSOLETO</option>
+                                                                          <option value='OPERATIVO'>OPERATIVO</option>
+
+                                                                          <option value='OBSOLETO'>OBSOLETO</option>
 
                                                           </select>
                                                     </div>

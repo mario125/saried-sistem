@@ -1,7 +1,40 @@
 {include 'overall/head.tpl'}
 
 
-<body class="signup-pagee">
+
+
+<body class="signup-pagee theme-red bg-indigo">
+  <!-- Page Loader -->
+  {include 'overall/load.tpl'}
+  <!-- #END# Page Loader -->
+  <!-- Overlay For Sidebars -->
+  <div class="overlay"></div>
+  <!-- #END# Overlay For Sidebars -->
+  <!-- Search Bar -->
+  {include 'overall/buscar.tpl'}
+  <!-- #END# Search Bar -->
+  <!-- Top Bar -->
+  {include 'overall/navbar.tpl'}
+  <!-- #Top Bar -->
+  <section>
+      <!-- Left Sidebar -->
+      <aside id="leftsidebar" class="sidebar">
+          <!-- User Info -->
+          {include 'overall/info_user.tpl'}
+          <!-- #User Info -->
+          <!-- Menu -->
+          {include 'overall/nav_movil.tpl'}
+          <!-- #Menu -->
+          <!-- Footer -->
+
+          <!-- #Footer -->
+      </aside>
+      <!-- #END# Left Sidebar -->
+      <!-- Right Sidebar -->
+
+      <!-- #END# Right Sidebar -->
+  </section>
+
 
     <div class="signup-box">
         <div class="logo">
@@ -122,8 +155,8 @@
 													</span>
 													<select id="estado"class=" estado form-control show-tick" required>
 																						<option value="2"> ESTADO </option>
-																						<option value="1">ACTIVO</option>
-																						<option value="0">INACTIVO</option>
+																						<option value="ACTIVO">ACTIVO</option>
+																						<option value="INACTIVO">INACTIVO</option>
 
 
 														</select>
@@ -248,7 +281,7 @@
                        {
 												 connect.onreadystatechange =function(){
 								           if (connect.readyState==4&&connect.status==200) {
-								             //alert(connect.responseText);
+								          //   alert(connect.responseText);
 								             if (parseInt(connect.responseText) ==1) {
 								                     result='<div class="alert alert-warning alert-dismissible" role="alert">  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>CONECTADO..</div>';
 								                     location.href= '?view=admin';

@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-02-17 21:48:09
+<?php /* Smarty version 3.1.27, created on 2017-03-24 13:19:53
          compiled from "C:\xampp\htdocs\SARI\styles\templates\overall\info_user.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:100979409958a76189f23096_50524897%%*/
+/*%%SmartyHeaderCode:175626127058d50ee9d97078_44689026%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3b8d32148dc5cab006c60c2416ebd85509c7d29b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\SARI\\styles\\templates\\overall\\info_user.tpl',
-      1 => 1486974678,
+      1 => 1490357968,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '100979409958a76189f23096_50524897',
+  'nocache_hash' => '175626127058d50ee9d97078_44689026',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_58a7618a0a08c2_06888008',
+  'unifunc' => 'content_58d50ee9dfb323_88075006',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_58a7618a0a08c2_06888008')) {
-function content_58a7618a0a08c2_06888008 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_58d50ee9dfb323_88075006')) {
+function content_58d50ee9dfb323_88075006 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '100979409958a76189f23096_50524897';
+$_smarty_tpl->properties['nocache_hash'] = '175626127058d50ee9d97078_44689026';
 ?>
 <div class="user-info">
     <div class="image">
@@ -37,11 +37,11 @@ $_smarty_tpl->properties['nocache_hash'] = '100979409958a76189f23096_50524897';
         <div class="btn-group user-helper-dropdown">
             <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
             <ul class="dropdown-menu pull-right " >
-                <li><a href="?view=perfil"><i class="material-icons">account_circle</i>Perfil</a></li>
+
                 <li role="seperator" class="divider"></li>
-                <li><a href="?view=registrarBien"><i class="material-icons">create</i>Registrar bien</a></li>
-                <li><a href="?view=prestarBien"><i class="material-icons">pan_tool</i>Prestar bien</a></li>
-                <li><a href="?view=importarBien"><i class="material-icons" >cloud_upload</i>Importar bienes</a></li>
+                <li><a href="?view=regisB"><i class="material-icons">create</i>Registrar bien</a></li>
+                
+
                 <li><a href="?view=registrarUser"><i class="material-icons">person_add</i>Registrar admin</a></li>
                 <li role="seperator" class="divider"></li>
                 <li><a href="?view=salir" ><i class="material-icons">lock</i>Salir</a></li>

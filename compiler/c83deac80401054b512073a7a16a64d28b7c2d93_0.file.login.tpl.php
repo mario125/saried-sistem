@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-02-18 21:04:33
+<?php /* Smarty version 3.1.27, created on 2017-03-25 02:59:58
          compiled from "C:\xampp\htdocs\SARI\styles\templates\overall\login.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:163095361158a8a8d14b6443_26010260%%*/
+/*%%SmartyHeaderCode:183907300558d5cf1ed48e01_54459746%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,22 +9,22 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c83deac80401054b512073a7a16a64d28b7c2d93' => 
     array (
       0 => 'C:\\xampp\\htdocs\\SARI\\styles\\templates\\overall\\login.tpl',
-      1 => 1486555586,
+      1 => 1490399051,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '163095361158a8a8d14b6443_26010260',
+  'nocache_hash' => '183907300558d5cf1ed48e01_54459746',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_58a8a8d1a820f1_70627397',
+  'unifunc' => 'content_58d5cf1eedc5f8_17721971',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_58a8a8d1a820f1_70627397')) {
-function content_58a8a8d1a820f1_70627397 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_58d5cf1eedc5f8_17721971')) {
+function content_58d5cf1eedc5f8_17721971 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '163095361158a8a8d14b6443_26010260';
+$_smarty_tpl->properties['nocache_hash'] = '183907300558d5cf1ed48e01_54459746';
 ?>
-<div class="signup-box">
+<div class="signup-box " >
     <div class="logo">
         <a href="javascript:void(0);">Admin<b>INVENTARIO</b></a>
         <small>UNAMBA-Abancay</small>

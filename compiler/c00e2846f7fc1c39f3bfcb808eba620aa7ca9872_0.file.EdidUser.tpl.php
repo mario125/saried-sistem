@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-02-19 10:41:11
+<?php /* Smarty version 3.1.27, created on 2017-03-24 13:16:49
          compiled from "C:\xampp\htdocs\SARI\styles\templates\public\EdidUser.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:137102859458a96837285629_26786760%%*/
+/*%%SmartyHeaderCode:203303975358d50e31e08f57_81668414%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c00e2846f7fc1c39f3bfcb808eba620aa7ca9872' => 
     array (
       0 => 'C:\\xampp\\htdocs\\SARI\\styles\\templates\\public\\EdidUser.tpl',
-      1 => 1487496825,
+      1 => 1490354194,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '137102859458a96837285629_26786760',
+  'nocache_hash' => '203303975358d50e31e08f57_81668414',
   'variables' => 
   array (
     'posts' => 0,
@@ -21,13 +21,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_58a96837358223_60891915',
+  'unifunc' => 'content_58d50e31e88b89_29543917',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_58a96837358223_60891915')) {
-function content_58a96837358223_60891915 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_58d50e31e88b89_29543917')) {
+function content_58d50e31e88b89_29543917 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '137102859458a96837285629_26786760';
+$_smarty_tpl->properties['nocache_hash'] = '203303975358d50e31e08f57_81668414';
 ?>
 
 <?php echo $_smarty_tpl->getSubTemplate ('overall/head.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
@@ -71,8 +71,6 @@ $_smarty_tpl->properties['nocache_hash'] = '137102859458a96837285629_26786760';
     </aside>
     <!-- #END# Left Sidebar -->
     <!-- Right Sidebar -->
-     <?php echo $_smarty_tpl->getSubTemplate ('overall/theme.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
-?>
 
     <!-- #END# Right Sidebar -->
 </section>
@@ -226,6 +224,9 @@ $foreach_tp_Sav = $_smarty_tpl->tpl_vars['tp'];
                                                                           <?php if ($_smarty_tpl->tpl_vars['tp']->value['con_user'] == "NOMBRADO") {?>
                               																						<option selected  value="NOMBRADO">NOMBRADO</option>
                                                                           <option   value="CONTRATADO">CONTRATADO</option>
+                                                                          <?php } else { ?>
+                                                                          <option   value="OTRO">OTRO</option>
+
                                                                           <?php }?>
 
 
@@ -244,13 +245,13 @@ $foreach_tp_Sav = $_smarty_tpl->tpl_vars['tp'];
                               															<i class="material-icons"> portrait</i>
                               													</span>
                               													<select id="estado"class="form-control show-tick" required>
-                                                                          <?php if ($_smarty_tpl->tpl_vars['tp']->value['est_user'] == "1") {?>
-                              																						<option selected value="1">ACTIVO</option>
-                                                                          <option value="0">INACTIVO</option>
+                                                                          <?php if ($_smarty_tpl->tpl_vars['tp']->value['est_user'] == "ACTIVO") {?>
+                              																						<option selected value="ACTIVO">ACTIVO</option>
+                                                                          <option value="INACTIVO">INACTIVO</option>
                                                                           <?php }?>
-                                                                          <?php if ($_smarty_tpl->tpl_vars['tp']->value['est_user'] == "0") {?>
-                                                                          <option value="1">ACTIVO</option>
-                              																						<option selected value="0">INACTIVO</option>
+                                                                          <?php if ($_smarty_tpl->tpl_vars['tp']->value['est_user'] == "INACTIVO") {?>
+                                                                          <option value="ACTIVO">ACTIVO</option>
+                              																						<option selected value="INACTIVO">INACTIVO</option>
 
                                                                           <?php }?>
 
@@ -311,15 +312,15 @@ $(document).ready(function()
                      '&nick='+nick+
                      '&pass='+pass+
                      '&condicion='+condicion+
-                     '&estado='+estado+
-                     '&foto='+foto;
+                     '&estado='+estado;
+            //   alert(form);
                connect = window.XMLHttpRequest ? new XMLHttpRequest() :  ActiveXObject('Microsoft.XMLHTTP');
 
-               if (id!=''&&dni.length==8&& nombres!=''&&apellidos!=''&&telefono.length==9&&direccion!=''&&nick!=''&&pass!=''&&condicion!='0'&&estado!='2')
+               if (id!=''&&dni.length==8&& nombres!=''&&apellidos!=''&&telefono.length==9&&direccion!=''&&nick!=''&&pass!=''&&condicion!='0')
                {
                  connect.onreadystatechange =function(){
                    if (connect.readyState==4&&connect.status==200) {
-                            //alert(connect.responseText);
+                          //  alert(connect.responseText);
                      if (parseInt(connect.responseText) ==1) {
                              result='<div class="alert alert-warning alert-dismissible" role="alert">  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>CONECTADO..</div>';
                              location.href= '?view=admin';

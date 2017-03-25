@@ -28,7 +28,7 @@
     </aside>
     <!-- #END# Left Sidebar -->
     <!-- Right Sidebar -->
-     {include 'overall/theme.tpl'}
+
     <!-- #END# Right Sidebar -->
 </section>
 
@@ -163,6 +163,9 @@
                                                                           {if $tp.con_user=="NOMBRADO"}
                               																						<option selected  value="NOMBRADO">NOMBRADO</option>
                                                                           <option   value="CONTRATADO">CONTRATADO</option>
+                                                                          {else}
+                                                                          <option   value="OTRO">OTRO</option>
+
                                                                           {/if}
 
 
@@ -181,13 +184,13 @@
                               															<i class="material-icons"> portrait</i>
                               													</span>
                               													<select id="estado"class="form-control show-tick" required>
-                                                                          {if $tp.est_user=="1"}
-                              																						<option selected value="1">ACTIVO</option>
-                                                                          <option value="0">INACTIVO</option>
+                                                                          {if $tp.est_user=="ACTIVO"}
+                              																						<option selected value="ACTIVO">ACTIVO</option>
+                                                                          <option value="INACTIVO">INACTIVO</option>
                                                                           {/if}
-                                                                          {if $tp.est_user=="0"}
-                                                                          <option value="1">ACTIVO</option>
-                              																						<option selected value="0">INACTIVO</option>
+                                                                          {if $tp.est_user=="INACTIVO"}
+                                                                          <option value="ACTIVO">ACTIVO</option>
+                              																						<option selected value="INACTIVO">INACTIVO</option>
 
                                                                           {/if}
 
@@ -242,15 +245,15 @@ $(document).ready(function()
                      '&nick='+nick+
                      '&pass='+pass+
                      '&condicion='+condicion+
-                     '&estado='+estado+
-                     '&foto='+foto;
+                     '&estado='+estado;
+            //   alert(form);
                connect = window.XMLHttpRequest ? new XMLHttpRequest() :  ActiveXObject('Microsoft.XMLHTTP');
 
-               if (id!=''&&dni.length==8&& nombres!=''&&apellidos!=''&&telefono.length==9&&direccion!=''&&nick!=''&&pass!=''&&condicion!='0'&&estado!='2')
+               if (id!=''&&dni.length==8&& nombres!=''&&apellidos!=''&&telefono.length==9&&direccion!=''&&nick!=''&&pass!=''&&condicion!='0')
                {
                  connect.onreadystatechange =function(){
                    if (connect.readyState==4&&connect.status==200) {
-                            //alert(connect.responseText);
+                          //  alert(connect.responseText);
                      if (parseInt(connect.responseText) ==1) {
                              result='<div class="alert alert-warning alert-dismissible" role="alert">  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>CONECTADO..</div>';
                              location.href= '?view=admin';

@@ -68,6 +68,15 @@
 
             var indice = document.getElementById("tipo").selectedIndex;
             var indice2 = document.getElementById("estado").selectedIndex;
+						if ($(".codigoP").val()=="") {
+							$(".codigoP").focus().after('<span class="error">CODIGO PATRIMONIAL</span>');
+             return false;
+						}
+						if ($(".codigoI").val()=="") {
+							$(".codigoI").focus().after('<span class="error">CODIGO INTERNO</span>');
+							return false;
+
+						}
 
 
             if( indice == null || indice == 0 ) {
@@ -97,8 +106,10 @@
           }
 
 
-						var connect,form,result,codigo,tipo,detalle,fecha,cantidad,valor,foto,estado;
+						var connect,form,result,codigo,codigoP,codigoI,tipo,detalle,fecha,cantidad,valor,foto,estado;
 						codigo=document.getElementById('codigo').value;
+						codigoP=document.getElementById('codigoP').value;
+						codigoI=document.getElementById('codigoI').value;
 						tipo=document.getElementById('tipo').value;
 						detalle=document.getElementById('descripcion').value;
 						fecha=document.getElementById('date-fr').value;
@@ -107,6 +118,8 @@
 						estado=document.getElementById('estado').value;
 						foto=name;
 						form='codigo='+codigo+
+						     '&codigoP='+codigoP+
+								 '&codigoI='+codigoI+
 								 '&tipo='+tipo+
 								 '&detalle='+detalle+
 								 '&fecha='+fecha+
@@ -119,14 +132,14 @@
 						if (true) {
 							connect.onreadystatechange =function(){
  							 if (connect.readyState==4&&connect.status==200) {
- 								  //alert(connect.responseText);
+ 								 // alert(connect.responseText);
  								 if (parseInt(connect.responseText) ==1) {
 
  												 result='<div class="alert alert-warning alert-dismissible" role="alert">  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>CONECTADO..</div>';
 
-												 setTimeout(envio(),500);												 
+												 setTimeout(envio(),500);
  												 document.getElementById('_AJAX_').innerHTML=result;
-												 location.href= '?view=admin';
+												 location.href= '?view=listaB';
 
 
  								 } else if(parseInt(connect.responseText)==2){

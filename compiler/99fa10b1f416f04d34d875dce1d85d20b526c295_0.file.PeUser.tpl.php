@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-02-19 10:12:40
+<?php /* Smarty version 3.1.27, created on 2017-03-24 12:58:24
          compiled from "C:\xampp\htdocs\SARI\styles\templates\public\PeUser.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:98770092358a961886ea039_24616649%%*/
+/*%%SmartyHeaderCode:28315512058d509e0913ff0_37098157%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '99fa10b1f416f04d34d875dce1d85d20b526c295' => 
     array (
       0 => 'C:\\xampp\\htdocs\\SARI\\styles\\templates\\public\\PeUser.tpl',
-      1 => 1487202655,
+      1 => 1490356698,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '98770092358a961886ea039_24616649',
+  'nocache_hash' => '28315512058d509e0913ff0_37098157',
   'variables' => 
   array (
     'posts' => 0,
@@ -21,13 +21,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_58a96188d02416_64598738',
+  'unifunc' => 'content_58d509e099b349_35433486',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_58a96188d02416_64598738')) {
-function content_58a96188d02416_64598738 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_58d509e099b349_35433486')) {
+function content_58d509e099b349_35433486 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '98770092358a961886ea039_24616649';
+$_smarty_tpl->properties['nocache_hash'] = '28315512058d509e0913ff0_37098157';
 ?>
 
 
@@ -72,8 +72,6 @@ $_smarty_tpl->properties['nocache_hash'] = '98770092358a961886ea039_24616649';
     </aside>
     <!-- #END# Left Sidebar -->
     <!-- Right Sidebar -->
-     <?php echo $_smarty_tpl->getSubTemplate ('overall/theme.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
-?>
 
     <!-- #END# Right Sidebar -->
 </section>
@@ -166,7 +164,7 @@ $foreach_tp_Sav = $_smarty_tpl->tpl_vars['tp'];
                             <h5>
                                 ESTADO:
                             </h5>
-                            <?php if ($_smarty_tpl->tpl_vars['tp']->value['est_user'] == "1") {?>
+                            <?php if ($_smarty_tpl->tpl_vars['tp']->value['est_user'] == "ACTIVO") {?>
                             <p>Activo</p>
                             <?php } else { ?>
                             <p>Inacivo</p>

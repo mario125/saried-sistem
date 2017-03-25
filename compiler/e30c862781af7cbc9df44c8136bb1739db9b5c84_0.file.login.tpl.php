@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-02-17 21:48:03
+<?php /* Smarty version 3.1.27, created on 2017-03-27 08:36:48
          compiled from "C:\xampp\htdocs\SARI\styles\templates\public\login.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:35973058158a76183b44512_47807693%%*/
+/*%%SmartyHeaderCode:120235804958d8b3003172c8_60373826%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e30c862781af7cbc9df44c8136bb1739db9b5c84' => 
     array (
       0 => 'C:\\xampp\\htdocs\\SARI\\styles\\templates\\public\\login.tpl',
-      1 => 1486974190,
+      1 => 1490596082,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '35973058158a76183b44512_47807693',
+  'nocache_hash' => '120235804958d8b3003172c8_60373826',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_58a7618448c986_96510319',
+  'unifunc' => 'content_58d8b3005fdd63_22526253',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_58a7618448c986_96510319')) {
-function content_58a7618448c986_96510319 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_58d8b3005fdd63_22526253')) {
+function content_58d8b3005fdd63_22526253 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '35973058158a76183b44512_47807693';
+$_smarty_tpl->properties['nocache_hash'] = '120235804958d8b3003172c8_60373826';
 echo $_smarty_tpl->getSubTemplate ('overall/head.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>
 
@@ -41,7 +41,7 @@ echo $_smarty_tpl->getSubTemplate ('overall/head.tpl', $_smarty_tpl->cache_id, $
            </div>
        </div>
    <?php } else { ?>
-   <body class="signup-page ls-closed gb-colo">
+   <body class="signup-page ls-closed bg-indigo">
      <?php echo $_smarty_tpl->getSubTemplate ('overall/login.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>
 
@@ -66,11 +66,12 @@ window.onload=function(){
       if (user!=''&&pass!='') {
         connect.onreadystatechange =function(){
           if (connect.readyState==4&&connect.status==200) {
-            alert(connect.responseText);
+          // alert(connect.responseText);
             if (parseInt(connect.responseText) ==1) {
                     result='<div class="alert alert-warning alert-dismissible" role="alert">  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>CONECTADO..</div>';
-                    location.href= '?view=admin';
+
                     document.getElementById('_AJAX_').innerHTML=result;
+                    location.href= '?view=admin';
 
 
             } else if(parseInt(connect.responseText)==0){

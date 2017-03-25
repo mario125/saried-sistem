@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-02-20 03:52:54
+<?php /* Smarty version 3.1.27, created on 2017-03-24 13:11:08
          compiled from "C:\xampp\htdocs\SARI\styles\templates\public\registrarUser.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:5190578158aa5a06d8f3a6_87122408%%*/
+/*%%SmartyHeaderCode:162122573958d50cdc3843c5_99256288%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,26 +9,69 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b77bf13f74babe255c9d728a96a3b9cea1adf0e6' => 
     array (
       0 => 'C:\\xampp\\htdocs\\SARI\\styles\\templates\\public\\registrarUser.tpl',
-      1 => 1487559157,
+      1 => 1490357465,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '5190578158aa5a06d8f3a6_87122408',
+  'nocache_hash' => '162122573958d50cdc3843c5_99256288',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_58aa5a06dd4121_70996422',
+  'unifunc' => 'content_58d50cdc3cbd29_02978581',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_58aa5a06dd4121_70996422')) {
-function content_58aa5a06dd4121_70996422 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_58d50cdc3cbd29_02978581')) {
+function content_58d50cdc3cbd29_02978581 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '5190578158aa5a06d8f3a6_87122408';
+$_smarty_tpl->properties['nocache_hash'] = '162122573958d50cdc3843c5_99256288';
 echo $_smarty_tpl->getSubTemplate ('overall/head.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>
 
 
 
-<body class="signup-pagee">
+
+
+<body class="signup-pagee theme-red bg-indigo">
+  <!-- Page Loader -->
+  <?php echo $_smarty_tpl->getSubTemplate ('overall/load.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
+  <!-- #END# Page Loader -->
+  <!-- Overlay For Sidebars -->
+  <div class="overlay"></div>
+  <!-- #END# Overlay For Sidebars -->
+  <!-- Search Bar -->
+  <?php echo $_smarty_tpl->getSubTemplate ('overall/buscar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
+  <!-- #END# Search Bar -->
+  <!-- Top Bar -->
+  <?php echo $_smarty_tpl->getSubTemplate ('overall/navbar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
+  <!-- #Top Bar -->
+  <section>
+      <!-- Left Sidebar -->
+      <aside id="leftsidebar" class="sidebar">
+          <!-- User Info -->
+          <?php echo $_smarty_tpl->getSubTemplate ('overall/info_user.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
+          <!-- #User Info -->
+          <!-- Menu -->
+          <?php echo $_smarty_tpl->getSubTemplate ('overall/nav_movil.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
+          <!-- #Menu -->
+          <!-- Footer -->
+
+          <!-- #Footer -->
+      </aside>
+      <!-- #END# Left Sidebar -->
+      <!-- Right Sidebar -->
+
+      <!-- #END# Right Sidebar -->
+  </section>
+
 
     <div class="signup-box">
         <div class="logo">
@@ -149,8 +192,8 @@ echo $_smarty_tpl->getSubTemplate ('overall/head.tpl', $_smarty_tpl->cache_id, $
 													</span>
 													<select id="estado"class=" estado form-control show-tick" required>
 																						<option value="2"> ESTADO </option>
-																						<option value="1">ACTIVO</option>
-																						<option value="0">INACTIVO</option>
+																						<option value="ACTIVO">ACTIVO</option>
+																						<option value="INACTIVO">INACTIVO</option>
 
 
 														</select>
@@ -278,7 +321,7 @@ echo $_smarty_tpl->getSubTemplate ('overall/head.tpl', $_smarty_tpl->cache_id, $
                        {
 												 connect.onreadystatechange =function(){
 								           if (connect.readyState==4&&connect.status==200) {
-								             //alert(connect.responseText);
+								          //   alert(connect.responseText);
 								             if (parseInt(connect.responseText) ==1) {
 								                     result='<div class="alert alert-warning alert-dismissible" role="alert">  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>CONECTADO..</div>';
 								                     location.href= '?view=admin';

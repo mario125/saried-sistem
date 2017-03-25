@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-02-20 05:39:57
+<?php /* Smarty version 3.1.27, created on 2017-03-24 12:26:55
          compiled from "C:\xampp\htdocs\SARI\styles\templates\public\verUser.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:93517026258aa731d4e3564_79017764%%*/
+/*%%SmartyHeaderCode:117263389458d5027fe53664_79669183%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6b7b977f73bd3f958cceb9b394ee0caefd03cc16' => 
     array (
       0 => 'C:\\xampp\\htdocs\\SARI\\styles\\templates\\public\\verUser.tpl',
-      1 => 1487565594,
+      1 => 1490354246,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '93517026258aa731d4e3564_79017764',
+  'nocache_hash' => '117263389458d5027fe53664_79669183',
   'variables' => 
   array (
     'posts' => 0,
@@ -21,13 +21,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_58aa731d555315_29734611',
+  'unifunc' => 'content_58d502800e8e48_40399438',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_58aa731d555315_29734611')) {
-function content_58aa731d555315_29734611 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_58d502800e8e48_40399438')) {
+function content_58d502800e8e48_40399438 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '93517026258aa731d4e3564_79017764';
+$_smarty_tpl->properties['nocache_hash'] = '117263389458d5027fe53664_79669183';
 echo $_smarty_tpl->getSubTemplate ('overall/head.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>
 
@@ -70,9 +70,7 @@ echo $_smarty_tpl->getSubTemplate ('overall/head.tpl', $_smarty_tpl->cache_id, $
       </aside>
       <!-- #END# Left Sidebar -->
       <!-- Right Sidebar -->
-       <?php echo $_smarty_tpl->getSubTemplate ('overall/theme.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
-?>
-
+       
       <!-- #END# Right Sidebar -->
   </section>
 
@@ -148,7 +146,7 @@ $foreach_tp_Sav = $_smarty_tpl->tpl_vars['tp'];
 </td>
                                         <td><?php echo $_smarty_tpl->tpl_vars['tp']->value['dir_user'];?>
 </td>
-                                        <?php if ($_smarty_tpl->tpl_vars['tp']->value['est_user'] == "1") {?>
+                                        <?php if ($_smarty_tpl->tpl_vars['tp']->value['est_user'] == "ACTIVO") {?>
                                         <td>ACTIVO</td>
                                         <?php } else { ?>
                                         <td>INACTIVO</td>
@@ -239,6 +237,9 @@ $(document).ready(function(){
 <?php echo $_smarty_tpl->getSubTemplate ('overall/js_footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>
 
+<?php echo '<script'; ?>
+ src="styles/js/pages/tables/jquery-datatable.js"><?php echo '</script'; ?>
+>
 </body>
 
 </html>

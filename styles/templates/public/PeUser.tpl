@@ -29,7 +29,7 @@
     </aside>
     <!-- #END# Left Sidebar -->
     <!-- Right Sidebar -->
-     {include 'overall/theme.tpl'}
+
     <!-- #END# Right Sidebar -->
 </section>
 
@@ -103,7 +103,7 @@
                             <h5>
                                 ESTADO:
                             </h5>
-                            {if $tp.est_user=="1"}
+                            {if $tp.est_user=="ACTIVO"}
                             <p>Activo</p>
                             {else}
                             <p>Inacivo</p>

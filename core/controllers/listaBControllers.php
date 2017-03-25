@@ -1,9 +1,10 @@
 <?php
 
 $template = new smarty();
-if($_SESSION['est_user']=='1'){
+if($_SESSION['est_user']=="ACTIVO"){
 
     $db = new Conexion();
+  
     $sql1=$db->query("SELECT ROUND(SUM(val_bien), 2) suma FROM bien;");
     while ($a =$db->rrecorrer($sql1)) {
       # code...

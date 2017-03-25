@@ -28,7 +28,7 @@
       </aside>
       <!-- #END# Left Sidebar -->
       <!-- Right Sidebar -->
-       {include 'overall/theme.tpl'}
+       
       <!-- #END# Right Sidebar -->
   </section>
 
@@ -87,7 +87,7 @@
                                         <td>{$tp.con_user}</td>
                                         <td>{$tp.tel_user}</td>
                                         <td>{$tp.dir_user}</td>
-                                        {if $tp.est_user=="1"}
+                                        {if $tp.est_user=="ACTIVO"}
                                         <td>ACTIVO</td>
                                         {else}
                                         <td>INACTIVO</td>
@@ -171,6 +171,7 @@ $(document).ready(function(){
 </script>
 
 {include 'overall/js_footer.tpl'}
+<script src="styles/js/pages/tables/jquery-datatable.js"></script>
 </body>
 
 </html>
