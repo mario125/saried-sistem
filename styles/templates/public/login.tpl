@@ -34,7 +34,11 @@ window.onload=function(){
       if (user!=''&&pass!='') {
         connect.onreadystatechange =function(){
           if (connect.readyState==4&&connect.status==200) {
+<<<<<<< HEAD
           // alert(connect.responseText);
+=======
+          //  alert(connect.responseText);
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
             if (parseInt(connect.responseText) ==1) {
                     result='<div class="alert alert-warning alert-dismissible" role="alert">  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>CONECTADO..</div>';
 

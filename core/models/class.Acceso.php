@@ -270,9 +270,13 @@ class Acceso{
           //  $sql  = $db->query("SELECT * FROM `bien` WHERE cod_bien='$this->codigo' AND est_cargo='ENTREGADO' ");
 
                         $sql = $db->query("INSERT INTO `bien`(
+<<<<<<< HEAD
                            `cod_bien`,
                            `cod_patrimonio`,
                            `cod_interno`,
+=======
+                          `cod_bien`,
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
                            `tip_bien`,
                            `det_bien`,
                            `fec_bien`,
@@ -282,8 +286,11 @@ class Acceso{
                            `reg_bien`,
                            `est_bien`) VALUES (
                              '$this->codigo',
+<<<<<<< HEAD
                              '$this->codigoP',
                              '$this->codigoI',
+=======
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
                              '$this->tipo',
                              '$this->detalle',
                              '$this->fecha',
@@ -396,9 +403,13 @@ class Acceso{
               $this->id =$db->real_escape_string($_POST['id']);
               $this->codigo =$db->real_escape_string($_POST['codigo']);
               $this->estado =$db->real_escape_string($_POST['estado']);
+<<<<<<< HEAD
               $this->prestador =$_SESSION['nom_user']. ' ' .$_SESSION['ape_user'];
 
 
+=======
+              $this->prestador =$db->real_escape_string($_SESSION['id_user']);
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
               $sql  = $db->query("SELECT * FROM cargo WHERE cod_bien='$this->codigo'and est_cargo='ENTREGADO'");
               if ($db-> rows($sql)==0) {
                   $sql2 = $db->query("INSERT INTO `cargo`( `pre_cargo`, `ofi_cargo`,
@@ -457,7 +468,11 @@ class Acceso{
             $this->id =$db->real_escape_string($_POST['id']);
             $this->codigo =$db->real_escape_string($_POST['codigo']);
             $this->estado =$db->real_escape_string($_POST['estado']);
+<<<<<<< HEAD
             $this->resepciona =$_SESSION['nom_user']. ' ' .$_SESSION['ape_user'];
+=======
+            $this->resepciona =$db->real_escape_string($_SESSION['id_user']);
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
             $this->entregadopor =$db->real_escape_string($_POST['entregadopor']);
             $this->cargo =$db->real_escape_string($_POST['cargo']);
             $this->fecha =$db->real_escape_string($_POST['fecha']);

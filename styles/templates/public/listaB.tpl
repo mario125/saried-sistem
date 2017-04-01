@@ -42,9 +42,13 @@
                               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                   <div class="card">
                                       <div class="header">
+<<<<<<< HEAD
                                          <center>
                                             <h3>EDITAR  BIEN REGISTRADO</h3>
                                           </center>
+=======
+                                          <h2>EDITAR BIEN</h2>
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
 
                                       </div>
                                       <div class="body">
@@ -159,7 +163,11 @@
                                                                       <select id="estado"class=" estado form-control show-tick" required>
                                                                                         <option value='0'>estado</option>
                                                                                         <option value='OPERATIVO'>OPERATIVO</option>
+<<<<<<< HEAD
 
+=======
+                                                                                        <option value='INOPERATIVO'>INOPERATIVO</option>
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
                                                                                         <option value='OBSOLETO'>OBSOLETO</option>
 
                                                                         </select>
@@ -211,6 +219,7 @@
                               </div>
                           </div>
 
+<<<<<<< HEAD
 
                       </div>
                   </div>
@@ -224,18 +233,37 @@
 
 
 
+=======
+
+                      </div>
+                  </div>
+              </section>
+            </form>
+            <div class="col-sm-offset-2 col-sm-8">
+              <p class="mensaje"></p>
+            </div>
+
+          </div>
+
+
+
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
   </div>
   <div class="row"  id="se">
     <div class="col-sm-12 col-md-12 col-lg-12">
             <div class="container-fluid" style="margin-top:100px;">
+<<<<<<< HEAD
 
                     <div class="card" >
                       <br>
+=======
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
 
                       <center>
                           <h3>LISTA DE BIENES REGISTRADOS</h3>
                         </center>
 
+<<<<<<< HEAD
 
 
 
@@ -461,6 +489,235 @@
             </div>
             <!-- #END# Tags Input -->
 
+=======
+
+
+                    <div class="card" >
+
+
+
+
+                        <div class="">
+
+                            <div class="body">
+                               <table id="dt_bien" class="table table-bordered table-striped table-hover dataTable js-exportable">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>CODIGO</th>
+                                            <th>TIPO</th>
+                                            <th>DETALLE</th>
+                                            <th>FECHA</th>
+                                            <th>CANTIDAD</th>
+                                            <th>VALOR</th>
+                                            <th>ESTADO</th>
+                                            <th>REGISTRADOR</th>
+                                            <th></th>
+
+                                        </tr>
+                                    </thead>
+
+                                    <tfoot>
+                                        <tr>
+                                          <th>ID</th>
+                                          <th>CODIGO</th>
+                                          <th>TIPO</th>
+                                          <th>DETALLE</th>
+                                          <th>FECHA R</th>
+                                          <th>CANTIDAD</th>
+                                          <th>VALOR</th>
+                                          <th>ESTADO</th>
+                                          <th>REGISTRADOR</th>
+                                          <th></th>
+
+
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+
+                                        {foreach from=$posts item=tp}
+                                        <tr>
+                                          <td >{$tp.id_bien }</td>
+                                          <td>{$tp.cod_bien}</td>
+                                          <td>{$tp.tip_bien}</td>
+                                          <td>{$tp.det_bien}</td>
+                                          <td>{$tp.fec_bien}</td>
+                                          <td>{$tp.can_bien}</td>
+                                          <td>{$tp.val_bien}</td>
+                                          <td>{$tp.est_bien}</td>
+                                          <td>{$tp.nom_user}</td>
+                                          <td><button type='button' id="editar"class='editar btn btn-primary'><i class="material-icons" title="editar">create </i></button>
+                                              <button type='button' id="prestar"class='prestar btn btn-danger'><i class="material-icons" title="prestar">pan_tool </i></button>
+                                           <button type='button' id="detalle"class='detalle btn bg-orange'><i class="material-icons" title="detalle">receipt</i></button>
+                                          </td>
+
+                                        </tr>
+                                          {/foreach}
+                                         <tr>
+                                            <td>total</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>S/:{$suma}</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+
+
+
+                                          </tr>
+
+
+
+
+
+                                    </tbody>
+
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+  </div>
+  <div class="row"  id="ter">
+    <section class="content">
+    <div class="container-fluid">
+
+
+        <div class="row clearfix">
+
+            <!-- Spinners -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+              <div id="_AJAX_">
+
+              </div>
+                <div class="card">
+                    <div class="header">
+                        <h2>   PRESTAR A:  </h2>
+
+                    </div>
+                    <div class="body">
+                        <div class="row clearfix">
+                            <div class="col-md-6">
+                              <p>
+                                  <b>OFICINA:</b>
+                              </p>
+                                <div class="input-group">
+
+                                    <div class="form-line">
+
+                                        <input type="text" id="oficinap"class="oficinap form-control " placeholder="OFICINA">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                              <p>
+                                  <b>EMTREGADO A:</b>
+                              </p>
+                                <div class="input-group">
+
+                                    <div class="form-line">
+
+                                        <input type="text" id="entregoap"class="entregoap form-control " placeholder="ENTREGADO A:">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                              <p>
+                                  <b>CARGO:</b>
+                              </p>
+                              <div class="input-group">
+
+                                  <select name='cargop' id='cargop' class="cargop form-control show-tick"  >
+                                      <option value='0'>CARGO</option>
+                                      <option   value='NOMBRADO'>NOMBRADO</option>
+                                      <option   value='CONTRATADO'>CONTRATADO</option>
+                                      <option   value='OTRO'>OTRO</option>
+
+
+                                  </select>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <p>
+                                  <b>FECHA:</b>
+                              </p>
+                                <div class="input-group">
+
+                                    <div class="form-line">
+
+                                        <input type="text" id="fechap"class="fechap form-control " placeholder="FECHA">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Spinners -->
+            <!-- Tags Input -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="card">
+                    <div class="header">
+                        <h2>  CARGO:    </h2>
+
+                    </div>
+                    <div class="body">
+                      <div class="row clearfix">
+                          <div class="col-md-6">
+                            <p>
+                                <b>ID:</b>
+                            </p>
+                              <div class="input-group">
+
+                                  <div class="form-line">
+
+                                      <input type="text" id="idp"class="idp form-control " placeholder="OFICINA" disabled="">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                            <p>
+                                <b>CODIGO:</b>
+                            </p>
+                              <div class="input-group">
+
+                                  <div class="form-line">
+
+                                      <input type="text" id="codigop"class="codigop form-control " placeholder="ENTREGADO A:" disabled="">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                            <p>
+                                <b>ESTADO:</b>
+                            </p>
+                            <div class="input-group">
+
+                                <select name='estadop' id='estadop' class="estadop form-control show-tick"  >
+                                    <option value='0'>ESTADO</option>
+                                    <option   value='ENTREGADO'>ENTREGADO</option>
+
+
+
+                                </select>
+                            </div>
+                          </div>
+
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Tags Input -->
+
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
             <div class="col-md-12">
               <div class="row clearfix demo-button-sizes">
                                               <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2">
@@ -520,7 +777,10 @@
 
                  var valores0=$(this).parents("tr").find("td").eq(0).text();
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
                  location.href= '?view=detalleBP&type='+valores0;
 
 

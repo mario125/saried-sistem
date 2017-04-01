@@ -37,9 +37,12 @@
           <div id="cuadro3" class=" row">
             <section class="content">
         <div class="container-fluid">
+<<<<<<< HEAD
           <center>
               <h3>DEVOLVER  BIEN <h2 style="color:red;"> {$id}</h2></h3>
             </center>
+=======
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
 
 
             <div class="row clearfix">
@@ -136,7 +139,11 @@
                                   <select name='estado' id='estado' class="estado form-control show-tick"  >
                                     <option value="0">ESTADO</option>
                                     <option value='OPERATIVO'>OPERATIVO</option>
+<<<<<<< HEAD
 
+=======
+                                    <option value='INOPERATIVO'>INOPERATIVO</option>
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
                                     <option value='OBSOLETO'>OBSOLETO</option>
 
 
@@ -298,7 +305,11 @@
                     cargo=document.getElementById('cargo').value;
                     fecha=document.getElementById('fechap').value;
                     nombre='devolver';
+<<<<<<< HEAD
 
+=======
+                  
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
                      if (error()==true ) {
 
 

@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 <?php /* Smarty version 3.1.27, created on 2017-03-31 22:45:14
          compiled from "C:\xampp\htdocs\SARI\styles\templates\public\regisB.tpl" */ ?>
 <?php
 /*%%SmartyHeaderCode:149522529258debfda598da6_77522580%%*/
+=======
+<?php /* Smarty version 3.1.27, created on 2017-03-24 13:05:25
+         compiled from "C:\xampp\htdocs\SARI\styles\templates\public\regisB.tpl" */ ?>
+<?php
+/*%%SmartyHeaderCode:179099589558d50b85ad9815_15805218%%*/
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,17 +16,26 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f39214d84c4644dca0efe84b94191f879c1aaa11' => 
     array (
       0 => 'C:\\xampp\\htdocs\\SARI\\styles\\templates\\public\\regisB.tpl',
+<<<<<<< HEAD
       1 => 1490993109,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '149522529258debfda598da6_77522580',
+=======
+      1 => 1490354226,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '179099589558d50b85ad9815_15805218',
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
   'variables' => 
   array (
     'id' => 0,
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
+<<<<<<< HEAD
   'unifunc' => 'content_58debfda5e6441_95105046',
 ),false);
 /*/%%SmartyHeaderCode%%*/
@@ -27,6 +43,15 @@ if ($_valid && !is_callable('content_58debfda5e6441_95105046')) {
 function content_58debfda5e6441_95105046 ($_smarty_tpl) {
 
 $_smarty_tpl->properties['nocache_hash'] = '149522529258debfda598da6_77522580';
+=======
+  'unifunc' => 'content_58d50b85b2b747_36380995',
+),false);
+/*/%%SmartyHeaderCode%%*/
+if ($_valid && !is_callable('content_58d50b85b2b747_36380995')) {
+function content_58d50b85b2b747_36380995 ($_smarty_tpl) {
+
+$_smarty_tpl->properties['nocache_hash'] = '179099589558d50b85ad9815_15805218';
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
 ?>
 
 <?php echo $_smarty_tpl->getSubTemplate ('overall/head.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
@@ -81,9 +106,13 @@ $_smarty_tpl->properties['nocache_hash'] = '149522529258debfda598da6_77522580';
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header">
+<<<<<<< HEAD
                         <center>
                             <h3>REGISTRAR BIEN</h3>
                           </center>
+=======
+                            <h2>REGISTRAR BIEN</h2>
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
 
                         </div>
                         <div class="body">
@@ -247,7 +276,11 @@ $_smarty_tpl->properties['nocache_hash'] = '149522529258debfda598da6_77522580';
                                                         <select id="estado"class=" estado form-control show-tick" required>
                                                                           <option value="0">ESTADO</option>
                                                                           <option value='OPERATIVO'>OPERATIVO</option>
+<<<<<<< HEAD
 
+=======
+                                                                          <option value='INOPERATIVO'>INOPERATIVO</option>
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
                                                                           <option value='OBSOLETO'>OBSOLETO</option>
 
                                                           </select>

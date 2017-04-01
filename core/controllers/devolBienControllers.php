@@ -30,9 +30,14 @@ if($_SESSION['est_user']=="ACTIVO"){
 
 	}
 	else {
+<<<<<<< HEAD
 		$id = isset($_GET['id'])? $_GET['id'] :null;
 		$template->assign('id',$id);
     $template->display('public/devolBien.tpl');
+=======
+
+      $template->display('public/devolBien.tpl');
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
 	}
 
 

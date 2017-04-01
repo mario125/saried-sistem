@@ -39,9 +39,13 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header">
+<<<<<<< HEAD
                         <center>
                             <h3>REGISTRAR BIEN</h3>
                           </center>
+=======
+                            <h2>REGISTRAR BIEN</h2>
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
 
                         </div>
                         <div class="body">
@@ -204,7 +208,11 @@
                                                         <select id="estado"class=" estado form-control show-tick" required>
                                                                           <option value="0">ESTADO</option>
                                                                           <option value='OPERATIVO'>OPERATIVO</option>
+<<<<<<< HEAD
 
+=======
+                                                                          <option value='INOPERATIVO'>INOPERATIVO</option>
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
                                                                           <option value='OBSOLETO'>OBSOLETO</option>
 
                                                           </select>

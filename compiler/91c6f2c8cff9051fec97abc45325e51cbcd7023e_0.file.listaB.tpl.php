@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 <?php /* Smarty version 3.1.27, created on 2017-03-31 22:48:40
          compiled from "C:\xampp\htdocs\SARI\styles\templates\public\listaB.tpl" */ ?>
 <?php
 /*%%SmartyHeaderCode:137301824358dec0a8672b64_43236283%%*/
+=======
+<?php /* Smarty version 3.1.27, created on 2017-03-25 00:39:39
+         compiled from "C:\xampp\htdocs\SARI\styles\templates\public\listaB.tpl" */ ?>
+<?php
+/*%%SmartyHeaderCode:84853123258d5ae3b500ff8_71817388%%*/
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +16,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '91c6f2c8cff9051fec97abc45325e51cbcd7023e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\SARI\\styles\\templates\\public\\listaB.tpl',
+<<<<<<< HEAD
       1 => 1490993316,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '137301824358dec0a8672b64_43236283',
+=======
+      1 => 1490398767,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '84853123258d5ae3b500ff8_71817388',
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
   'variables' => 
   array (
     'posts' => 0,
@@ -22,6 +37,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
+<<<<<<< HEAD
   'unifunc' => 'content_58dec0a86db016_40801097',
 ),false);
 /*/%%SmartyHeaderCode%%*/
@@ -29,6 +45,15 @@ if ($_valid && !is_callable('content_58dec0a86db016_40801097')) {
 function content_58dec0a86db016_40801097 ($_smarty_tpl) {
 
 $_smarty_tpl->properties['nocache_hash'] = '137301824358dec0a8672b64_43236283';
+=======
+  'unifunc' => 'content_58d5ae44ac72a9_15463247',
+),false);
+/*/%%SmartyHeaderCode%%*/
+if ($_valid && !is_callable('content_58d5ae44ac72a9_15463247')) {
+function content_58d5ae44ac72a9_15463247 ($_smarty_tpl) {
+
+$_smarty_tpl->properties['nocache_hash'] = '84853123258d5ae3b500ff8_71817388';
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
 echo $_smarty_tpl->getSubTemplate ('overall/head.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>
 
@@ -83,9 +108,13 @@ echo $_smarty_tpl->getSubTemplate ('overall/head.tpl', $_smarty_tpl->cache_id, $
                               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                   <div class="card">
                                       <div class="header">
+<<<<<<< HEAD
                                          <center>
                                             <h3>EDITAR  BIEN REGISTRADO</h3>
                                           </center>
+=======
+                                          <h2>EDITAR BIEN</h2>
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
 
                                       </div>
                                       <div class="body">
@@ -200,7 +229,11 @@ echo $_smarty_tpl->getSubTemplate ('overall/head.tpl', $_smarty_tpl->cache_id, $
                                                                       <select id="estado"class=" estado form-control show-tick" required>
                                                                                         <option value='0'>estado</option>
                                                                                         <option value='OPERATIVO'>OPERATIVO</option>
+<<<<<<< HEAD
 
+=======
+                                                                                        <option value='INOPERATIVO'>INOPERATIVO</option>
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
                                                                                         <option value='OBSOLETO'>OBSOLETO</option>
 
                                                                         </select>
@@ -244,6 +277,7 @@ echo $_smarty_tpl->getSubTemplate ('overall/head.tpl', $_smarty_tpl->cache_id, $
 
                                                                                                 </div>
                                                                                             </div>
+<<<<<<< HEAD
 
 
 
@@ -265,17 +299,47 @@ echo $_smarty_tpl->getSubTemplate ('overall/head.tpl', $_smarty_tpl->cache_id, $
 
 
 
+=======
+
+
+
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+
+
+                      </div>
+                  </div>
+              </section>
+            </form>
+            <div class="col-sm-offset-2 col-sm-8">
+              <p class="mensaje"></p>
+            </div>
+
+          </div>
+
+
+
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
   </div>
   <div class="row"  id="se">
     <div class="col-sm-12 col-md-12 col-lg-12">
             <div class="container-fluid" style="margin-top:100px;">
 
+<<<<<<< HEAD
                     <div class="card" >
                       <br>
 
                       <center>
                           <h3>LISTA DE BIENES REGISTRADOS</h3>
                         </center>
+=======
+
+
+
+                    <div class="card" >
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
 
 
 
@@ -350,8 +414,12 @@ $foreach_tp_Sav = $_smarty_tpl->tpl_vars['tp'];
 </td>
                                           <td><button type='button' id="editar"class='editar btn btn-primary'><i class="material-icons" title="editar">create </i></button>
                                               <button type='button' id="prestar"class='prestar btn btn-danger'><i class="material-icons" title="prestar">pan_tool </i></button>
+<<<<<<< HEAD
                                            <button type='button' id=""class='detalle btn bg-orange'href="?view=detalleBP" ><i class="material-icons" title="detalle">receipt</i></button>
 
+=======
+                                           <button type='button' id="detalle"class='detalle btn bg-orange'><i class="material-icons" title="detalle">receipt</i></button>
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
                                           </td>
 
                                         </tr>
@@ -371,23 +439,36 @@ $_smarty_tpl->tpl_vars['tp'] = $foreach_tp_Sav;
                                             <td></td>
                                             <td></td>
                                             <td></td>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
 
 
                                           </tr>
 
+<<<<<<< HEAD
+=======
+                                          </tr>
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
 
 
 
 
                                     </tbody>
 
+<<<<<<< HEAD
+=======
+                                    </tbody>
+
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
                                 </table>
                             </div>
 
                         </div>
                     </div>
                 </div>
+<<<<<<< HEAD
 
             </div>
 
@@ -475,6 +556,159 @@ $_smarty_tpl->tpl_vars['tp'] = $foreach_tp_Sav;
                 <div class="card">
                     <div class="header">
                         <h2>  CARGO:    </h2>
+=======
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
+
+            </div>
+
+
+  </div>
+  <div class="row"  id="ter">
+    <section class="content">
+    <div class="container-fluid">
+
+
+        <div class="row clearfix">
+
+            <!-- Spinners -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+              <div id="_AJAX_">
+
+              </div>
+                <div class="card">
+                    <div class="header">
+                        <h2>   PRESTAR A:  </h2>
+
+                    </div>
+                    <div class="body">
+                        <div class="row clearfix">
+                            <div class="col-md-6">
+                              <p>
+                                  <b>OFICINA:</b>
+                              </p>
+                                <div class="input-group">
+
+                                    <div class="form-line">
+
+                                        <input type="text" id="oficinap"class="oficinap form-control " placeholder="OFICINA">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                              <p>
+                                  <b>EMTREGADO A:</b>
+                              </p>
+                                <div class="input-group">
+
+                                    <div class="form-line">
+
+                                        <input type="text" id="entregoap"class="entregoap form-control " placeholder="ENTREGADO A:">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                              <p>
+                                  <b>CARGO:</b>
+                              </p>
+                              <div class="input-group">
+
+                                  <select name='cargop' id='cargop' class="cargop form-control show-tick"  >
+                                      <option value='0'>CARGO</option>
+                                      <option   value='NOMBRADO'>NOMBRADO</option>
+                                      <option   value='CONTRATADO'>CONTRATADO</option>
+                                      <option   value='OTRO'>OTRO</option>
+
+
+                                  </select>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <p>
+                                  <b>FECHA:</b>
+                              </p>
+                                <div class="input-group">
+
+                                    <div class="form-line">
+
+                                        <input type="text" id="fechap"class="fechap form-control " placeholder="FECHA">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="body">
+                      <div class="row clearfix">
+                          <div class="col-md-6">
+                            <p>
+                                <b>ID:</b>
+                            </p>
+                              <div class="input-group">
+
+                                  <div class="form-line">
+
+                                      <input type="text" id="idp"class="idp form-control " placeholder="OFICINA" disabled="">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                            <p>
+                                <b>CODIGO:</b>
+                            </p>
+                              <div class="input-group">
+
+                                  <div class="form-line">
+
+                                      <input type="text" id="codigop"class="codigop form-control " placeholder="ENTREGADO A:" disabled="">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                            <p>
+                                <b>ESTADO:</b>
+                            </p>
+                            <div class="input-group">
+
+                                <select name='estadop' id='estadop' class="estadop form-control show-tick"  >
+                                    <option value='0'>ESTADO</option>
+                                    <option   value='ENTREGADO'>ENTREGADO</option>
+
+
+
+                                </select>
+                            </div>
+                          </div>
+
+                      </div>
+                    </div>
+                </div>
+            </div>
+<<<<<<< HEAD
+            <!-- #END# Tags Input -->
+
+            <div class="col-md-12">
+              <div class="row clearfix demo-button-sizes">
+                                              <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2">
+
+                                              </div>
+                                              <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2">
+
+                                              </div>
+                                              <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2">
+                                                  <button type="button" id="entregap"class="btn bg-cyan btn-block btn-lg waves-effect">ENTREGAR</button>
+
+                                              </div>
+                                              <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2">
+                                                  <button type="button" id="volverp"class="btn bg-cyan btn-block btn-lg waves-effect">VOLVER</button>
+                                              </div>
+                                              <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2">
+
+=======
+            <!-- #END# Spinners -->
+            <!-- Tags Input -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="card">
+                    <div class="header">
+                        <h2>  CARGO:    </h2>
 
                     </div>
                     <div class="body">
@@ -542,6 +776,7 @@ $_smarty_tpl->tpl_vars['tp'] = $foreach_tp_Sav;
                                               </div>
                                               <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2">
 
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
                                               </div>
                                               <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2">
 
@@ -587,7 +822,10 @@ $_smarty_tpl->tpl_vars['tp'] = $foreach_tp_Sav;
 
                  var valores0=$(this).parents("tr").find("td").eq(0).text();
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
                  location.href= '?view=detalleBP&type='+valores0;
 
 

@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 <?php /* Smarty version 3.1.27, created on 2017-03-31 23:56:26
          compiled from "C:\xampp\htdocs\SARI\styles\templates\public\devolBien.tpl" */ ?>
 <?php
 /*%%SmartyHeaderCode:77737998858ded08ac27fd6_98688277%%*/
+=======
+<?php /* Smarty version 3.1.27, created on 2017-03-24 13:06:06
+         compiled from "C:\xampp\htdocs\SARI\styles\templates\public\devolBien.tpl" */ ?>
+<?php
+/*%%SmartyHeaderCode:32873723358d50bae8488d7_98033520%%*/
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,6 +16,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e2935c6d5ddbd2f85d89b5e8600a2c81d3cfc42f' => 
     array (
       0 => 'C:\\xampp\\htdocs\\SARI\\styles\\templates\\public\\devolBien.tpl',
+<<<<<<< HEAD
       1 => 1490997384,
       2 => 'file',
     ),
@@ -27,6 +35,22 @@ if ($_valid && !is_callable('content_58ded08ac7dc95_79223688')) {
 function content_58ded08ac7dc95_79223688 ($_smarty_tpl) {
 
 $_smarty_tpl->properties['nocache_hash'] = '77737998858ded08ac27fd6_98688277';
+=======
+      1 => 1490357163,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '32873723358d50bae8488d7_98033520',
+  'has_nocache_code' => false,
+  'version' => '3.1.27',
+  'unifunc' => 'content_58d50bae8a2105_25791029',
+),false);
+/*/%%SmartyHeaderCode%%*/
+if ($_valid && !is_callable('content_58d50bae8a2105_25791029')) {
+function content_58d50bae8a2105_25791029 ($_smarty_tpl) {
+
+$_smarty_tpl->properties['nocache_hash'] = '32873723358d50bae8488d7_98033520';
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
 echo $_smarty_tpl->getSubTemplate ('overall/head.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>
 
@@ -78,10 +102,13 @@ echo $_smarty_tpl->getSubTemplate ('overall/head.tpl', $_smarty_tpl->cache_id, $
           <div id="cuadro3" class=" row">
             <section class="content">
         <div class="container-fluid">
+<<<<<<< HEAD
           <center>
               <h3>DEVOLVER  BIEN <h2 style="color:red;"> <?php echo $_smarty_tpl->tpl_vars['id']->value;?>
 </h2></h3>
             </center>
+=======
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
 
 
             <div class="row clearfix">
@@ -178,7 +205,11 @@ echo $_smarty_tpl->getSubTemplate ('overall/head.tpl', $_smarty_tpl->cache_id, $
                                   <select name='estado' id='estado' class="estado form-control show-tick"  >
                                     <option value="0">ESTADO</option>
                                     <option value='OPERATIVO'>OPERATIVO</option>
+<<<<<<< HEAD
 
+=======
+                                    <option value='INOPERATIVO'>INOPERATIVO</option>
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
                                     <option value='OBSOLETO'>OBSOLETO</option>
 
 
@@ -347,7 +378,11 @@ echo $_smarty_tpl->getSubTemplate ('overall/head.tpl', $_smarty_tpl->cache_id, $
                     cargo=document.getElementById('cargo').value;
                     fecha=document.getElementById('fechap').value;
                     nombre='devolver';
+<<<<<<< HEAD
 
+=======
+                  
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
                      if (error()==true ) {
 
 

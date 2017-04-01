@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 <?php /* Smarty version 3.1.27, created on 2017-03-27 08:36:48
          compiled from "C:\xampp\htdocs\SARI\styles\templates\public\login.tpl" */ ?>
 <?php
 /*%%SmartyHeaderCode:120235804958d8b3003172c8_60373826%%*/
+=======
+<?php /* Smarty version 3.1.27, created on 2017-03-24 13:03:45
+         compiled from "C:\xampp\htdocs\SARI\styles\templates\public\login.tpl" */ ?>
+<?php
+/*%%SmartyHeaderCode:77880229558d50b218b3945_60068354%%*/
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,6 +16,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e30c862781af7cbc9df44c8136bb1739db9b5c84' => 
     array (
       0 => 'C:\\xampp\\htdocs\\SARI\\styles\\templates\\public\\login.tpl',
+<<<<<<< HEAD
       1 => 1490596082,
       2 => 'file',
     ),
@@ -23,6 +31,22 @@ if ($_valid && !is_callable('content_58d8b3005fdd63_22526253')) {
 function content_58d8b3005fdd63_22526253 ($_smarty_tpl) {
 
 $_smarty_tpl->properties['nocache_hash'] = '120235804958d8b3003172c8_60373826';
+=======
+      1 => 1490357022,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '77880229558d50b218b3945_60068354',
+  'has_nocache_code' => false,
+  'version' => '3.1.27',
+  'unifunc' => 'content_58d50b219694c5_73912276',
+),false);
+/*/%%SmartyHeaderCode%%*/
+if ($_valid && !is_callable('content_58d50b219694c5_73912276')) {
+function content_58d50b219694c5_73912276 ($_smarty_tpl) {
+
+$_smarty_tpl->properties['nocache_hash'] = '77880229558d50b218b3945_60068354';
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
 echo $_smarty_tpl->getSubTemplate ('overall/head.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>
 
@@ -66,7 +90,11 @@ window.onload=function(){
       if (user!=''&&pass!='') {
         connect.onreadystatechange =function(){
           if (connect.readyState==4&&connect.status==200) {
+<<<<<<< HEAD
           // alert(connect.responseText);
+=======
+          //  alert(connect.responseText);
+>>>>>>> 476c4881ed012252a345357dae08e035f3de8bac
             if (parseInt(connect.responseText) ==1) {
                     result='<div class="alert alert-warning alert-dismissible" role="alert">  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>CONECTADO..</div>';
 
